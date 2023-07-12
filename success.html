@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="stylesheet" href="styles/success.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="success-container">
+            <div class="success_image">
+                <img src="assets/images/icon-success.svg" alt="">
+            </div>
+            <h1>Thanks for Subscribing!</h1>
+            <p>A confirmation has sent to <strong id="emailValue" class="strong"></strong>. 
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+        </div>
+        
+        <div class="btn">
+            <button>Dismiss</button>
+        </div>
+        
+    </div>
+    <script>
+        // Retrieve the email from localStorage and update the strong tag
+        const emailValue = document.getElementById('emailValue');
+        const subscribedEmail = localStorage.getItem('subscribedEmail');
+        emailValue.textContent = subscribedEmail;
+    </script>
+</body>
+</html>
